@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Journal</title>
+    <style>
+        @font-face {
+            font-family: 'dudu';
+            src: url('fonts/dudu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html body {
+            cursor: url('cursor/liscursor/Cursor\ LiS/Arrow.cur'), default;
+            /* cursor: url('cursor/liscursor/Cursor\ LiS/IBeam.cur'), text; */
+
+        }
+
+        body {
+            font-family: 'dudu';
+            background-image: url('bg/profile/raffa3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .parent-left {
+            position: absolute;
+            top: 30%;
+            left: 14.5%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        .sevensins{
+            font-size: vw;
+        }
+
+        .parent-right {
+            position: absolute;
+            top: 15%;
+            right: 18%;
+            transform: rotate(-4deg);
+            width: 25vw;
+        }
+
+        #seven{
+            width: 100%;
+            /* position: absolute; */
+        }
+        /* Top Section */
+        .parent-top {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            display: flex;
+            gap: 1vw;
+            transform: rotate(-10deg);
+        }
+
+        .book-index,
+        .people-button,
+        .button-sms {
+            width: 9vw;
+            transition: transform 0.2s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            box-shadow: 1px 2px 5px black;
+        }
+
+        .book-index:hover,
+        .people-button:hover,
+        .button-sms:hover {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .parent-bottom {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        .hozbar {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+        }
+
+        .hozbar li a {
+            color: gray;
+            font-weight: bold;
+            font-size: 1.5vw;
+            text-decoration: none;
+            transition: 0.3s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer
+        }
+
+        .hozbar li a:hover {
+            transform: rotate(-6deg);
+        }
+
+        h1 {
+            font-size: 2.5vw;
+            color: black;
+        }
+
+        p{
+            font-size: 1.3vw;
+            color: black;
+            text-align: left;
+        }
+
+        li{
+            font-size: 2.1vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top -->
+        <div class="parent-top">
+            <a href="index.html"><img src="photos/assets/book-index.png" class="book-index"></a>
+            <a href="index-profile.html"><img src="photos/assets/people-button-removebg-preview.png"
+                    class="people-button"></a>
+            <a href="sms.html"><img src="photos/assets/Button-sms.png" class="button-sms"></a>
+        </div>
+
+        <!-- Left Content -->
+        <div class="parent-left">
+        </div>
+
+        <!-- Right Image -->
+        <div class="parent-right">
+            <ol start="3">
+                <li>
+                    <p style="text-align: center;">
+                        <img src="photos/assets/seven.gif" id="seven" align="center">
+                        <br>
+                        <br>
+                        In an unnamed city overcome with violent crime and corruption, disillusioned police Detective Lieutenant William Somerset is one week from retirement. He is partnered with David Mills, a young, short-tempered, idealistic detective who recently relocated to the city with his wife, Tracy.
+                    </p>
+                </li>
+                </ol>
+            </div>
+            
+            <!-- Bottom Navigation -->
+            <div class="parent-bottom">
+                <ul class="hozbar">
+                    <li><a href="#">Next</a></li>
+                    <li><a href="raffa2.html">Previous</a></li>
+                    <li><a href="#">(Page 3/3)</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

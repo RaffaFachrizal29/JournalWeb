@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'dudu';
+            src: url('fonts/dudu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html body {
+            cursor: url('cursor/liscursor/Cursor\ LiS/Arrow.cur'), default;
+            /* cursor: url('cursor/liscursor/Cursor\ LiS/IBeam.cur'), text; */
+
+        }
+
+        body {
+            font-family: 'dudu';
+            background-image: url('bg/profile/Anin.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Left Section */
+        .parent-left {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        #anin {
+            margin: 2%;
+            width: 40%;
+            box-shadow: 1px 1px 1px black;
+        }
+
+        /* Right Section */
+        .parent-right {
+            position: absolute;
+            top: 15%;
+            right: 8%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        .parent-top {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            display: flex;
+            gap: 1vw;
+            transform: rotate(-10deg);
+        }
+
+        .book-index,
+        .people-button {
+            width: 9vw;
+            transition: transform 0.2s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            box-shadow: 1px 2px 5px black;
+        }
+
+        .book-index:hover,
+        .people-button:hover {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .parent-bottom {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        .hozbar {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+        }
+
+        .hozbar li a {
+            color: gray;
+            font-weight: bold;
+            font-size: 1.5vw;
+            text-decoration: none;
+            transition: 0.3s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer
+        }
+
+        .hozbar li a:hover {
+            transform: rotate(-6deg);
+        }
+
+        h3 {
+            font-size: 2vw;
+            color: black;
+        }
+
+        p {
+            font-size: 1.4vw;
+            color: black;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top -->
+        <div class="parent-top">
+            <a href="index.html"><img src="photos/assets/book-index.png" class="book-index"></a>
+            <a href="index-profile.html"><img src="photos/assets/people-button-removebg-preview.png"
+                    class="people-button"></a>
+            <a href="sms.html"><img src="photos/assets/Button-sms.png" class="button-sms"></a>
+        </div>
+
+        <!-- Left Content -->
+        <div class="parent-left">
+            <h3>Namaku Anindia Putri Rabbani.</h3>
+            <p>
+                Sejak kecil, aku punya cita-cita menjadi seorang polwan. Aku ingin membantu banyak orang dan menjadi sosok yang kuat dan bisa diandalkan. Di sisi lain, aku juga hobi menari. Menari membuatku merasa bebas dan bahagia, seolah semua perasaan bisa disampaikan lewat gerakan.
+                <br>
+                <br>
+                <br>
+                Aku percaya, meski cita-citaku butuh perjuangan, tidak ada yang tidak mungkin selama aku terus berusaha. Suatu hari nanti, aku ingin jadi polwan yang juga bisa menginspirasi orang lewat seni tari.
+            </p>
+        </div>
+        
+        <!-- Right Image -->
+        <div class="parent-right">
+            <p>
+                <img src="photos/profile/anin.png" id="anin">
+            </p>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="parent-bottom">
+            <ul class="hozbar">
+                <li><a href="#">Next</a></li>
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">(Page 1/1)</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

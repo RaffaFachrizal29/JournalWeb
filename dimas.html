@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'dudu';
+            src: url('fonts/dudu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html body {
+            cursor: url('cursor/liscursor/Cursor\ LiS/Arrow.cur'), default;
+            /* cursor: url('cursor/liscursor/Cursor\ LiS/IBeam.cur'), text; */
+
+        }
+
+        body {
+            font-family: 'dudu';
+            background-image: url('bg/profile/Pawong.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Left Section */
+        .parent-left {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        /* Right Section */
+        .parent-right {
+            position: absolute;
+            top: 15%;
+            right: 7%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+         #dimas{
+            position: absolute;
+            margin-left: 35vh;
+            top: 36vh;
+            bottom: 1vw;
+            width: 35%;
+            box-shadow: 1px 2px 3px black;
+         }
+
+         .custom-audio-player{
+            color: black;
+            width: 100%;
+            position: absolute;
+            bottom: -70%;
+            left: -20%;
+         }
+
+         #playPauseBtn{
+            background: transparent;
+            border: transparent;
+            color: black;
+         }
+
+         #seekBar{
+            flex: 1;
+            appearance: none;
+            background: none;
+            border: 1px solid gray;
+            outline: none;
+            height: 0.2vw;
+         }
+
+         #music-cover{
+            width: 20%;
+            margin-left: 20%;
+            margin-right: 1%;
+            border: 2px solid gray;
+         }
+        /* Top Section */
+        .parent-top {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            display: flex;
+            gap: 1vw;
+            transform: rotate(-10deg);
+        }
+
+        .book-index,
+        .people-button {
+            width: 9vw;
+            transition: transform 0.2s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            box-shadow: 1px 2px 5px black;
+        }
+
+        .book-index:hover,
+        .people-button:hover {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .parent-bottom {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        .hozbar {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+        }
+
+        .hozbar li a {
+            color: gray;
+            font-weight: bold;
+            font-size: 1.5vw;
+            text-decoration: none;
+            transition: 0.3s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer
+        }
+
+        .hozbar li a:hover {
+            transform: rotate(-6deg);
+        }
+
+        h1 {
+            font-size: 2.5vw;
+            color: black;
+        }
+
+        p {
+            margin-top: 1vw;
+            font-size: 1.3vw;
+            color: black;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top -->
+        <div class="parent-top">
+            <a href="index.html"><img src="photos/assets/book-index.png" class="book-index"></a>
+            <a href="index-profile.html"><img src="photos/assets/people-button-removebg-preview.png"
+                    class="people-button"></a>
+            <a href="sms.html"><img src="photos/assets/Button-sms.png" class="button-sms"></a>
+        </div>
+
+        <!-- Left Content -->
+        <div class="parent-left">
+            <h1>Wong Skuyy !!</h1>
+            <p>
+                Hai nama aku Dimas Fathrul Rahman tapi orang lain lebih sering memanggilku dengan nama samaran. Hobi aku mungkin running karena hanya itu yang sering aku lakukan, Kegiatan ini aku lakukan secara rutin karena selain menyehatkan, juga membantu aku menjaga disiplin dan fokus dalam aktivitas sehari-hari.
+                aku juga suka banget nonton film—apa pun itu. Mau itu anime, drakor, atau dracin. drama favoritku adalah Twinklink Watermelon dan When I Fly Towards You. 
+            </p>
+            <img src="photos/profile/dimas.png" id="dimas">
+        </div>
+
+        <!-- Right Image -->
+        <div class="parent-right">
+            <p>
+                Aku suka banget dengerin musik, Salah satu penyanyi favoritku adalah Daniel Caesar—lagunya yang berjudul "Hold Me Down" jadi salah satu lagu yang paling sering aku putar, aku juga suka Rex Orange County, apalagi lagu "Happiness". lagu ini sering aku putar sebelum tidur. aku selalu memutar musik ini bukan karena lagi galau, tapi lagu nya aja yang enak di dengar.
+            </p>
+            <div class="custom-audio-player" id="player">
+                <h5>Hold Me Down - Daniel Caesar
+                    <img align="left" src="photos/assets/holdmedown.jpg" id="music-cover">
+                </h5>
+                <button id="playPauseBtn"> ▶︎</button>
+                <span id="currentTime">0:00</span> /
+                <span id="duration">0:00</span>
+                <br>
+                <input type="range" id="seekBar" value="0" min="0" max="100">
+                <audio id="audio" src="audio/Daniel Caesar - Hold Me Down.mp3"></audio>
+                </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="parent-bottom">
+            <ul class="hozbar">
+                <li><a href="#">Next</a></li>
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">(Page 1/1)</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+    const audio = document.getElementById("audio");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const currentTimeEl = document.getElementById("currentTime");
+    const durationEl = document.getElementById("duration");
+    const seekBar = document.getElementById("seekBar");
+
+    let isPlaying = false;
+
+    function formatTime(time) {
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60).toString().padStart(2, '0');
+        return `${minutes}:${seconds}`;
+    }
+
+    playPauseBtn.addEventListener("click", () => {
+        if (isPlaying) {
+            audio.pause();
+            playPauseBtn.textContent = " ▶︎";
+        } else {
+            audio.play();
+            playPauseBtn.textContent = "||";
+        }
+        isPlaying = !isPlaying;
+    });
+
+    audio.addEventListener("loadedmetadata", () => {
+        durationEl.textContent = formatTime(audio.duration);
+    });
+
+    audio.addEventListener("timeupdate", () => {
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+        seekBar.value = (audio.currentTime / audio.duration) * 100;
+    });
+
+    seekBar.addEventListener("input", () => {
+        audio.currentTime = (seekBar.value / 100) * audio.duration;
+    });
+</script>
+</body>
+</html>

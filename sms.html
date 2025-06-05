@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'dudu';
+            src: url('fonts/dudu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html body{
+            cursor: url('cursor/liscursor/Cursor\ LiS/Arrow.cur'), default;
+            /* cursor: url('cursor/liscursor/Cursor\ LiS/IBeam.cur'), text; */
+            
+        }
+
+        body {
+            font-family: 'dudu';
+            background-image: url('bg/sms.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .parent-center {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+
+        .parent-top {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            display: flex;
+            gap: 1vw;
+            transform: rotate(-10deg);
+        }
+
+        .book-index, .people-button {
+            width: 9vw;
+            transition: transform 0.2s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            box-shadow: 1px 2px 5px black;
+        }
+
+        .book-index:hover,
+        .people-button:hover {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .parent-bottom {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        .hozbar {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+        }
+
+        .hozbar li a {
+            color: gray;
+            font-weight: bold;
+            font-size: 1.5vw;
+            text-decoration: none;
+            transition: 0.3s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer
+        }
+
+        .hozbar li a:hover {
+            transform: rotate(-6deg);
+        }
+
+        /* Form Style */
+        .comment-box {
+            border: 1px solid black;
+            margin: 10px 0;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            background-color: #fdf6e3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top -->
+        <div class="parent-top">
+            <a href="index.html"><img src="photos/assets/book-index.png" class="book-index"></a>
+            <a href="index-profile.html"><img src="photos/assets/people-button-removebg-preview.png" class="people-button"></a>
+            <a href="sms.html"><img src="photos/assets/Button-sms.png" class="button-sms"></a>
+        </div>
+
+        <!-- Content -->
+        <div class="parent-center">
+            <div id="c_widget">
+                <script src="comment-widget.js"></script>
+            </div>
+        </div>
+        
+        <!-- Bottom Navigation -->
+        <div class="parent-bottom">
+            <ul class="hozbar">
+                <li><a href="#">Next</a></li>
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">(SMS Page)</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Comment Script -->
+</body>
+</html>

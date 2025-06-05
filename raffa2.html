@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'dudu';
+            src: url('fonts/dudu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html body {
+            cursor: url('cursor/liscursor/Cursor\ LiS/Arrow.cur'), default;
+            /* cursor: url('cursor/liscursor/Cursor\ LiS/IBeam.cur'), text; */
+
+        }
+
+        body {
+            font-family: 'dudu';
+            background-image: url('bg/profile/raffa2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Left Section */
+        .parent-left {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        #eternal{
+            width: 50%;
+            /* position: absolute; */
+            top: 80%;
+            margin-right: 5%;
+            box-shadow: 1px 1px 1px black;
+        }
+
+        /* Right Section */
+        .parent-right {
+            position: absolute;
+            top: 10%;
+            right: 7%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+        
+        #baby-driver{
+            /* position: absolute; */
+            width: 40%;
+            /* box-shadow: 1px 1px 1px black; */
+        }
+
+        #baby-driver-gif{
+            width: 50%;
+            position: absolute;
+            top: 100%;
+            right: 5%;
+            border: 10px solid white;
+            box-shadow: 1px 1px 1px black;
+        }
+
+        /* Top Section */
+        .parent-top {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            display: flex;
+            gap: 1vw;
+            transform: rotate(-10deg);
+        }
+
+        .book-index,
+        .people-button {
+            width: 9vw;
+            transition: transform 0.2s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            box-shadow: 1px 2px 5px black;
+        }
+
+        .book-index:hover,
+        .people-button:hover {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .parent-bottom {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        .hozbar {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+        }
+
+        .hozbar li a {
+            color: gray;
+            font-weight: bold;
+            font-size: 1.5vw;
+            text-decoration: none;
+            transition: 0.3s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer
+        }
+
+        .hozbar li a:hover {
+            transform: rotate(-6deg);
+        }
+
+        h2 {
+            font-size: 2.5vw;
+            color: black;
+        }
+
+        p, li{
+            font-size: 1.6vw;
+            color: black;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top -->
+        <div class="parent-top">
+            <a href="index.html"><img src="photos/assets/book-index.png" class="book-index"></a>
+            <a href="index-profile.html"><img src="photos/assets/people-button-removebg-preview.png"
+                    class="people-button"></a>
+            <a href="sms.html"><img src="photos/assets/Button-sms.png" class="button-sms"></a>
+        </div>
+
+        <!-- Left Content -->
+        <div class="parent-left">
+            <h2>My top 3 Movies</h2>
+            <ol>
+                <li>
+                    <p>
+                    <img src="photos/assets/Eternal Sunshine Of The Spotless Mind.gif" id="eternal" align="left">
+                        Joel Barish discovers that his estranged girlfriend, Clementine Kruczynski, has undergone a procedure to have her memories of him erased by the New York City firm Lacuna. Heartbroken, he decides to undergo the same procedure. In preparation, he records a tape recounting his memories of their volatile relationship.
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Right Image -->
+        <div class="parent-right">
+                <ol start="2">
+                    <li>
+                        <p style="font-size: 2.6vh;">
+                            <img src="photos/assets/Baby Driver.png" id="baby-driver" align="left">
+                            In Atlanta, Miles, self-named "Baby", is a young getaway driver who lost his parents in a car crash that left him with tinnitus, and finds catharsis in music. He ferries crews of robbers assembled by kingpin Doc to pay off a debt as recompense for theft of a car containing Doc's illicit goods. Between jobs, he remixes snippets of recorded conversations and cares for his deaf foster father Joseph. At the local diner, Bo’s Diner, he meets a waitress named Debora, and they start dating.
+                        </p>
+                    </li>
+                </ol>
+                <img src="photos/assets/Baby Driver.gif" id="baby-driver-gif">
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="parent-bottom">
+            <ul class="hozbar">
+                <li><a href="raffa3.html">Next</a></li>
+                <li><a href="raffa.html">Previous</a></li>
+                <li><a href="#">(Page 2/3)</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

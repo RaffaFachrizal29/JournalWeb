@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Journal</title>
+    <style>
+        @font-face {
+            font-family: 'dudu';
+            src: url('fonts/dudu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html body {
+            cursor: url('cursor/liscursor/Cursor\ LiS/Arrow.cur'), default;
+            /* cursor: url('cursor/liscursor/Cursor\ LiS/IBeam.cur'), text; */
+
+        }
+
+        body {
+            font-family: 'dudu';
+            background-image: url('final-sketch.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .parent-left {
+            position: absolute;
+            top: 30%;
+            left: 13%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        .parent-right {
+            position: absolute;
+            top: 32%;
+            right: 23%;
+            transform: rotate(-4deg);
+            width: 20vw;
+        }
+
+        .github {
+            width: 40%;
+            rotate: -4deg;
+            transition: ease 0.1s;
+        }
+
+        .github:hover{
+            background-image: url(photos/polaroid/github-selected.png);
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: scale(1.2);
+        }
+
+        .parent-top {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            display: flex;
+            gap: 1vw;
+            transform: rotate(-10deg);
+        }
+
+        .book-index,
+        .people-button,
+        .button-sms {
+            width: 9vw;
+            transition: transform 0.2s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            box-shadow: 1px 2px 5px black;
+        }
+
+        .book-index:hover,
+        .people-button:hover,
+        .button-sms:hover {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .parent-bottom {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        .hozbar {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+        }
+
+        .hozbar li a {
+            color: gray;
+            font-weight: bold;
+            font-size: 1.5vw;
+            text-decoration: none;
+            transition: 0.3s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer
+        }
+
+        .hozbar li a:hover {
+            transform: rotate(-6deg);
+        }
+
+        h1 {
+            font-size: 2.5vw;
+            color: black;
+        }
+
+        p{
+            font-size: 1.8vw;
+            color: black;
+            text-align: left;
+        }
+
+        li{
+            font-size: 2.1vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top -->
+        <div class="parent-top">
+            <a href="index.html"><img src="photos/assets/book-index.png" class="book-index"></a>
+            <a href="index-profile.html"><img src="photos/assets/people-button-removebg-preview.png"
+                    class="people-button"></a>
+            <a href="sms.html"><img src="photos/assets/Button-sms.png" class="button-sms"></a>
+        </div>
+
+        <!-- Left Content -->
+        <div class="parent-left">
+            <h1>Welcome to our Journal !!</h1>
+            <p>halo semua, selamat datang di journal kami, kenal kami lebih dekat
+                lewat journal yang berantakan ini. Happy Reading !!</p>
+        </div>
+
+        <!-- Right Image -->
+        <div class="parent-right">
+            <h1>Credits !!</h1>
+            <ol>
+                <li>Anin - Concept</li>
+                <li>Azril - Assets Designer</li>
+                <li>Raja - Frontend Programmer</li>
+                <li>Dimas - Frontend Programmer</li>
+                <li>Raffa - Backend Programmer</li>
+            </ol>
+            <a href="https://www.github.com/raffafachrizal29/JournalWeb">
+                <img src="photos/polaroid/github.png" class="github">
+            </a>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="parent-bottom">
+            <ul class="hozbar">
+                <li><a href="#">Next</a></li>
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">(Home Page)</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

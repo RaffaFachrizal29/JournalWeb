@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'dudu';
+            src: url('fonts/dudu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html body {
+            cursor: url('cursor/liscursor/Cursor\ LiS/Arrow.cur'), default;
+            /* cursor: url('cursor/liscursor/Cursor\ LiS/IBeam.cur'), text; */
+
+        }
+
+        body {
+            font-family: 'dudu';
+            background-image: url('bg/profile/Azril.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Left Section */
+        .parent-left {
+            position: absolute;
+            top: 30%;
+            left: 15%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        #raja {
+            margin: 2%;
+            width: 50%;
+            box-shadow: 1px 1px 1px black;
+        }
+
+        /* Right Section */
+        .parent-right {
+            position: absolute;
+            top: 15%;
+            right: 7%;
+            transform: rotate(-4deg);
+            width: 35vw;
+        }
+
+        #azril{
+            position: absolute;
+            width: 40%;
+            margin-top: 5%;
+            left: 60%;
+        }
+        /* Top Section */
+        .parent-top {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            display: flex;
+            gap: 1vw;
+            transform: rotate(-10deg);
+        }
+
+        .book-index,
+        .people-button {
+            width: 9vw;
+            transition: transform 0.2s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            box-shadow: 1px 2px 5px black;
+        }
+
+        .book-index:hover,
+        .people-button:hover {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .parent-bottom {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        .hozbar {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+        }
+
+        .hozbar li a {
+            color: gray;
+            font-weight: bold;
+            font-size: 1.5vw;
+            text-decoration: none;
+            transition: 0.3s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer
+        }
+
+        .hozbar li a:hover {
+            transform: rotate(-6deg);
+        }
+
+        h1 {
+            font-size: 2.5vw;
+            color: black;
+        }
+
+        p {
+            font-size: 1.8vw;
+            color: black;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top -->
+        <div class="parent-top">
+            <a href="index.html"><img src="photos/assets/book-index.png" class="book-index"></a>
+            <a href="index-profile.html"><img src="photos/assets/people-button-removebg-preview.png"
+                    class="people-button"></a>
+            <a href="sms.html"><img src="photos/assets/Button-sms.png" class="button-sms"></a>
+        </div>
+
+        <!-- Left Content -->
+        <div class="parent-left">
+            <h1>Hallo derrr..</h1>
+            <p>
+                namaku azril, panggil aje admin. sekolah di smk 3 perguruan cikini, hobi ku mancing. kenapa hobi mancing?ya karena seru aja gitu mancing sambil mikirin kehidupan,masalah,bengong, yang penting lari dari realita lah. tapi kalo mancing ga sendiri, biasanya sama temen temen. walau jarang dapet ikan tapi gpp..
+            </p>
+        </div>
+
+        <!-- Right Image -->
+        <div class="parent-right">
+            <p>
+                sekarang aku kelas 11 smk, ambil jurusan di TKJ. anak komputer nih brayy, tapi karena itu aku jadi sering di bilang hacker, padahal mah bukan, kacau derr..
+                udah segitu aje.
+            </p>
+            <img src="photos/profile/azril.png" id="azril">
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="parent-bottom">
+            <ul class="hozbar">
+                <li><a href="#">Next</a></li>
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">(Page 1/1)</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'dudu';
+            src: url('fonts/dudu.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html body {
+            cursor: url('cursor/liscursor/Cursor\ LiS/Arrow.cur'), default;
+            /* cursor: url('cursor/liscursor/Cursor\ LiS/IBeam.cur'), text; */
+
+        }
+
+        body {
+            font-family: 'dudu';
+            background-image: url('bg/selectprofile.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Left Section */
+        .parent-left {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            transform: rotate(-4deg);
+            width: 35vw;
+            padding: 1vw;
+        }
+
+        #raffa {
+            width: 35%;
+            position: absolute;
+            left: 15%;
+            transform: rotate(-3deg);
+            box-shadow: 1px 1px 1px black;
+            transition: ease 0.1s;
+            z-index: 1;
+        }
+
+        #raffa:hover {
+            transform: scale(1.2) rotate(3deg);
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            z-index: 5;
+        }
+
+        #raja {
+            position: absolute;
+            width: 40%;
+            left: 50%;
+            top: 650%;
+            transform: rotate(-10deg);
+            z-index: 2;
+            transition: ease 0.1s;
+            box-shadow: 1px 1px 1px black;
+        }
+
+        #raja:hover {
+            transform: scale(1.2);
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            z-index: 5;
+
+        }
+
+        /* Right Section */
+        .parent-right {
+            position: absolute;
+            top: 32%;
+            right: 16%;
+            transform: rotate(-4deg);
+            width: 20vw;
+        }
+
+        #dimas{
+            position: absolute;
+            width: 60%;
+            right: 75%;
+            top: 1vh;
+            bottom: 1vh;
+            box-shadow: 1px 1px 1px black;
+            z-index: 2;
+            transition: ease 0.1s;
+            transform: rotate(10deg);
+        }
+
+        #dimas:hover{
+            transform: scale(1.2);
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            z-index: 5;
+
+        }
+
+        #anin{
+            width: 60%;
+            position: absolute;
+            left: 50%;
+            top: -7vw;
+            z-index: 3;
+            box-shadow: 1px 1px 1px black;
+            transition: ease 0.1s;
+            transform: rotate(5deg);
+        }
+
+        #anin:hover{
+            transform: scale(1.2);
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            z-index: 5;
+        }
+
+        #azril{
+            width: 60%;
+            position: absolute;
+            top: 10vw;
+            left: 60%;
+            z-index: 3;
+            box-shadow: 1px 1px 1px black;
+            transition: ease 0.1s;
+            transform:rotate(-4deg);
+        }
+
+        #azril:hover{
+            transform: scale(1.2);
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            z-index: 5;
+        }
+
+        /* Top Section */
+        .parent-top {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            display: flex;
+            gap: 1vw;
+            transform: rotate(-10deg);
+        }
+
+        .book-index,
+        .people-button {
+            width: 9vw;
+            transition: transform 0.2s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer;
+            box-shadow: 1px 2px 5px black;
+        }
+
+        .book-index:hover,
+        .people-button:hover {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        /* Bottom Section */
+        .parent-bottom {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+        }
+
+        .hozbar {
+            list-style: none;
+            display: flex;
+            gap: 2vw;
+        }
+
+        .hozbar li a {
+            color: gray;
+            font-weight: bold;
+            font-size: 1.5vw;
+            text-decoration: none;
+            transition: 0.3s ease;
+            cursor: url('cursor/liscursor/Cursor\ LiS/Help.cur'), pointer
+        }
+
+        .hozbar li a:hover {
+            transform: rotate(-6deg);
+        }
+
+        h1 {
+            font-size: 2.5vw;
+            color: gray;
+        }
+
+        p {
+            font-size: 1.8vw;
+            color: gray;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top -->
+        <div class="parent-top">
+            <a href="index.html"><img src="photos/assets/book-index.png" class="book-index"></a>
+            <a href="index-profile.html"><img src="photos/assets/people-button-removebg-preview.png"
+                    class="people-button"></a>
+            <a href="sms.html"><img src="photos/assets/Button-sms.png" class="button-sms"></a>
+        </div>
+
+        <!-- Left Content -->
+        <div class="parent-left">
+            <a href="raffa.html"><img src="photos/profile/raffa.png" id="raffa"></a>
+            <a href="raja.html"><img src="photos/profile/raja.png" id="raja"></a>
+        </div>
+        
+        <!-- Right Image -->
+        <div class="parent-right">
+            <a href="dimas.html"><img src="photos/profile/dimas.png" id="dimas"></a>
+            <a href="anin.html"><img src="photos/profile/anin.png" id="anin"></a>
+            <a href="azril.html"><img src="photos/profile/azril.png" id="azril"></a>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="parent-bottom">
+            <ul class="hozbar">
+                <li><a href="#">Next</a></li>
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">(Select Profiles)</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
